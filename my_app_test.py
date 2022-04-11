@@ -7,7 +7,7 @@ class SimpleTest(unittest.TestCase):
     def test_hello(self):
         response = app.test_client().get('/')
         assert response.status_code == 200
-        assert response.data == b'<p>Hello, Wd!</p>'
+        assert response.data == b'<p>Hello, World!</p>'
 
 
 if __name__ == '__main__':
