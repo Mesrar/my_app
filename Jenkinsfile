@@ -1,11 +1,11 @@
 pipeline {
-  agent any
+ agent { dockerfile true }
   stages {
     stage('Build') {
       parallel {
         stage('Build') {
           steps {
-            sh 'echo "building the repo"'
+            sh 'python3 --version'
           }
         }
       }
