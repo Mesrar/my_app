@@ -1,12 +1,14 @@
 # test_hello.py
 from app import app
+import unittest
 
 
-def test_hello():
-    response = app.test_client().get('/')
-    assert response.status_code == 200
-    assert response.data == b'<p>Hello, Wd!</p>'
+class SimpleTest(unittest.TestCase):
+    def test_hello(self):
+        response = app.test_client().get('/')
+        assert response.status_code == 200
+        assert response.data == b'<p>Hello, Wd!</p>'
 
 
 if __name__ == '__main__':
-    test_hello()
+    unittest.main()
